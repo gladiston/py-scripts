@@ -29,8 +29,8 @@ def file_info_error(def_file_info: str, def_msg: str):
     print('Este arquivo deve estar no seguinte formato:')
     print('# producao = desenvolvimento')
     print('# host; usuario; senha; database = host; usuario; senha; database')
-    print(r'server01;sysdba;c:\vidy15\dados\acad.fdb=localhost;sysdba;c:\vidy15\dados\acad.fdb')
-    print(r'server01;sysdba;c:\vidy15\dados\vidy15.fdb=localhost;sysdba;c:\vidy15\dados\vidy15.fdb')
+    print(r'server01;sysdba;c:\\local\\remoto\\para\\os\\dados\\acad.fdb=localhost;sysdba;c:\\local\\para\\os\\dados\\acad.fdb')
+    print(r'server01;sysdba;c:\\local\\remoto\\para\\os\\dados\\vidy15.fdb=localhost;sysdba;c:\\local\\para\\os\\dados\\vidy15.fdb')
     print('Onde:')
     print('  a esqueda do sinal de igualdade "=" está o banco de dados de origem(ex. produção)')
     print('  a direita fica o banco de dados de destino(ex. desenvolvimento)')
@@ -362,7 +362,7 @@ def main():
     sys_last_error = ''
 
     # Parametro que indica a definição dos bancos de dados a serem restaurados para a area de desenvolvimento
-    file_info = r'c:\vidy15\Backups\FDBReverter.inf'
+    file_info = r'c:\\local\\onde\a\\lista\\sera\\salva\FDBReverter.inf'
     print('Lendo o arquivo de configuração: {}'.format(file_info))
     if (not Path(file_info).is_file()):
         sys_last_error = 'Arquivo de configuração não exisste: {}'.format(file_info)

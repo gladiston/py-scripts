@@ -1,2 +1,2 @@
 # py-scripts
- Scripts Python para facilitar a vida de dev e admin
+ Scripts Python para facilitar a vida de dev e admin.
